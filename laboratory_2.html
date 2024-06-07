@@ -247,7 +247,7 @@
                                                 <td>BULK MASTER Nicotine Free</td>
 
                                                 <td>9/9/2025</td>
-                                                <td>NS-NP00M</td>
+                                                <td>10%</td>
                                                 <td>58008,00gm</td>
                                                 <td>9/9/2028</td>
                                                 <td>15/9/2028</td>
@@ -351,6 +351,67 @@
 </div>
 
 <script src="js/app.js"></script>
+<div class="modal" id="addProductModal">
+    <div class="modal-dialog">
+        <div class="row">
+            <div class="modal-content">
+                <form class="form-horizontal" id="submitProductForm"
+                      action="/project/4/part/2/table-name/investments_cost" method="POST"
+                      enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <input type="hidden" name="csrfmiddlewaretoken"
+                               value="IcnXyKedfs3pHyBu2iIlAbNNRwWP1QNOL9h7cPuGyAn3i6RyW6R1gziDyAEg1ddN">
+
+                        <div class="row mb-2">
+                            <div class="col-md-3">
+                                <label class="col-form-label">
+                                    Master batch item code
+                                </label>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <input value="FL-VO181" disabled="" type="text" name="investment_designation" maxlength="35" class="form-control"
+                                           required="" id="id_investment_designation" data-value="">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-3">
+                                <label class="col-form-label">
+                                    Bulk formula name
+                                </label>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <input value="BULK MASTER Nicotine Free" disabled="" type="text" name="investment_designation" maxlength="35" class="form-control"
+                                           required="" id="id_investment_designation" data-value="">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div> <!-- /modal-body -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
+                                class="glyphicon glyphicon-remove-sign"></i> Close
+                        </button>
+
+                        <button type="submit" class="btn btn-primary" id="createProductBtn"
+                                data-loading-text="Loading..." autocomplete="off"><i class="fas fa-folder"></i> Save
+                        </button>
+                    </div> <!-- /modal-footer -->
+                </form> <!-- /.form -->
+            </div> <!-- /modal-content -->
+        </div>
+    </div>
+</div>
 
 <script>
 		document.addEventListener("DOMContentLoaded", function() {
