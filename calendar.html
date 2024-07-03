@@ -229,17 +229,11 @@
                     alert('Event Moved: ' + event.title + ' Start: ' + start + ' End: ' + end);
                 },
                 eventClick: function (event) {
-                    if (confirm("Are you sure you want to remove it?")) {
-                        $('#calendar').fullCalendar('removeEvents', event._id);
-                        alert('Event Removed');
-                    }
+                    window.location.href = 'production_plan_3.html';
                 }
             });
         });
-
-
-
-        </script>
+    </script>
 
     </div>
     </main>
