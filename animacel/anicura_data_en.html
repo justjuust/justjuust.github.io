@@ -205,8 +205,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="c3590d93-97e4-47d2-a983-329ff392d417" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The number of patients with two treatments </span><span class="sc">{</span><span class="bu">len</span>(data_with_2nd_dates[<span class="st">'1st-2nd-treatment_days'</span>])<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The number of patients who returned before the 500th day </span><span class="sc">{</span><span class="bu">sum</span>(data_with_2nd_dates[<span class="st">"1st-2nd-treatment_days"</span>]<span class="op">&lt;</span><span class="dv">501</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The number of patients with two treatments is </span><span class="sc">{</span><span class="bu">len</span>(data_with_2nd_dates[<span class="st">'1st-2nd-treatment_days'</span>])<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The number of patients who returned before the 500th day is </span><span class="sc">{</span><span class="bu">sum</span>(data_with_2nd_dates[<span class="st">"1st-2nd-treatment_days"</span>]<span class="op">&lt;</span><span class="dv">501</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Median values of treatments is </span><span class="sc">{</span>data_with_2nd_dates[<span class="st">"1st-2nd-treatment_days"</span>]<span class="sc">.</span>median()<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mean values of treatments is </span><span class="sc">{</span>data_with_2nd_dates[<span class="st">"1st-2nd-treatment_days"</span>]<span class="sc">.</span>mean()<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -250,7 +250,6 @@ Figure&nbsp;1: Histrogram of days between 1st and 2nd treatment
 <li>from 1.5 to 2 years – very good,<br>
 </li>
 <li>more than 2 years – excellent.<br>
-<br>
 </li>
 </ol>
 <p>From the histogram <a href="#fig-distribution-of-success" class="quarto-xref">Figure&nbsp;2</a>, it is evident that the most numerous group is “excellent.”<br>
@@ -302,7 +301,7 @@ Figure&nbsp;2: Distribution of sucess groups.
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>display(table_of_interest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="tbl-mytable" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="10" data-tbl-pos="H">
+<div id="tbl-mytable" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-pos="H" data-execution_count="10">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mytable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Potek klasifikacije
@@ -414,9 +413,10 @@ Table&nbsp;1: Potek klasifikacije
 </div>
 </div>
 </section>
-<section id="are-there-significant-patterns-in-time-intervals-regarding-age" class="level3">
-<h3 class="anchored" data-anchor-id="are-there-significant-patterns-in-time-intervals-regarding-age">Are there significant patterns in time intervals regarding age?</h3>
-<p>The distribution of age at the first application is shown in the image <a href="#fig-distribution-of-ages" class="quarto-xref">Figure&nbsp;3</a>. In the left column of graphs, we have all patients, while in the right column, we have only patients who received two treatments. From the first row of graphs, it can be observed that the distribution is skewed towards the right. Patients who received two treatments are somewhat younger. We divided the patients into four age groups: 1. 0 to 2 years,<br>
+<section id="are-there-significant-patterns-in-time-intervals-regarding-the-age-of-patients" class="level3">
+<h3 class="anchored" data-anchor-id="are-there-significant-patterns-in-time-intervals-regarding-the-age-of-patients">Are there significant patterns in time intervals regarding the age of patients?</h3>
+<p>The distribution of age at the first application is shown in the image <a href="#fig-distribution-of-ages" class="quarto-xref">Figure&nbsp;3</a>. In the left column of graphs, we have all patients, while in the right column, we have only patients who received two treatments. From the first row of graphs, it can be observed that the distribution is skewed towards the right. Patients who received two treatments are somewhat younger. We divided the patients into four age groups:<br>
+1. 0 to 2 years,<br>
 2. 2 to 6 years,<br>
 3. 6 to 10 years,<br>
 4. more than 10 years.<br>
